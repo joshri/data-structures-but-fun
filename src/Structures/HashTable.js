@@ -90,11 +90,22 @@ class HashTable {
 	hash(key) {
 		// calculate and return an integer value based key, like in the lesson
 		// remember, if you are using modulus, it is recommended to use a prime number to avoid clustering
-		let hash = null;
-		for (let i = 0; i < key.length; i++) {
-			let chr = key.charCodeAt(i);
-			hash = (hash << 5) - hash + chr;
-			hash |= 0; // Convert to 32bit integer
+		// let hash = null;
+		// for (let i = 0; i < key.length; i++) {
+		// 	let chr = key.charCodeAt(i);
+		// 	hash = (hash << 5) - hash + chr;
+		//     hash |= 0; // Convert to 32bit integer
+		//     hash = Math.floor(hash % 10000000007);
+		// }
+		// return hash;
+		var hash = 0;
+		if (key.length === 0) {
+			return hash;
+		}
+		for (var i = 0; i < key.length; i++) {
+			var char = key.charCodeAt(i);
+			hash = (hash << 1) - hash + char;
+			hash = hash & hash; // Convert to 32bit integer
 		}
 		return hash;
 	}
@@ -141,4 +152,4 @@ class HashTable {
 	}
 }
 
-export { Node, LinkedList, HashTable };
+export {Node, LinkedList, HashTable}

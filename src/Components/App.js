@@ -1,10 +1,10 @@
 import React from 'react';
-import {Node, LinkedList, HashTable} from './HashTable';
-
+import {Node, LinkedList, HashTable} from '../Structures/HashTable';
 
 function App() {
-  const gribble = new HashTable(10);
-	console.log(gribble.insert('hop', 'pop'));
+  const testeroo = new HashTable(10);
+  console.log(testeroo);
+	console.log(testeroo.insert('hop', 'pop'));
   return (
     <div className="App">
       

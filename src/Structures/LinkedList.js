@@ -1,4 +1,4 @@
-class Node {
+export class Node {
 	constructor(data) {
 		// a Node starts with a given data property
 		this.data = data;
@@ -7,7 +7,7 @@ class Node {
 	}
 }
 
-class LinkedList {
+export class LinkedList {
 	constructor() {
 		// a Linked List starts with a "head" property intialized as null
 		this.head = null;
